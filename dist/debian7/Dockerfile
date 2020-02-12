@@ -2,7 +2,7 @@ FROM debian:wheezy
 
 MAINTAINER Graylog Inc. <hello@graylog.com>
 
-RUN echo "deb http://archive.debian.org/debian wheezy main" > /etc/apt/sources.list \
+RUN 	echo "deb http://archive.debian.org/debian wheezy main" > /etc/apt/sources.list \
 	&& echo "deb http://archive.debian.org/debian-security wheezy/updates main" >> /etc/apt/sources.list \
 	&& echo "deb http://archive.debian.org/debian wheezy-backports main" > /etc/apt/sources.list.d/backports.list \
 	&& apt-get update -o Acquire::Check-Valid-Until=false \
