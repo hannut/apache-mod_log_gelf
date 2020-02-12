@@ -20,6 +20,13 @@
 
 ## Build deb -binary package using above built image
 
+   * clean build environment from previous runs (if any)
+```
+  $ rm -r dist/cache dist/tmp-*
+```
+
+   * run one of the below depending on the chosen Debian release
+
 ```
   $ docker run --rm=true -v `pwd`:/apache-gelf -t -i apache-gelf-debian7  fpm-cook package /apache-gelf/dist/recipe.rb
   $ docker run --rm=true -v `pwd`:/apache-gelf -t -i apache-gelf-debian8  fpm-cook package /apache-gelf/dist/recipe.rb
