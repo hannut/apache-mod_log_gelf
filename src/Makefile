@@ -12,9 +12,9 @@ ifneq (,$(wildcard /usr/lib64/httpd/build/special.mk))
 endif
 ifneq (,$(wildcard /etc/debian_version))
   DISTRIBUTION := $(shell lsb_release -i | cut -f2)
-  RELEASE := $(shell lsb_release --short --release)
+  RELEASE := $(shell lsb_release --short --codename)
   ifeq ($(DISTRIBUTION),Debian)
-    ifeq ($(RELEASE),7)
+    ifeq ($(RELEASE),wheezy)
       DEFS=-DWITH_APACHE22
     endif
   endif
