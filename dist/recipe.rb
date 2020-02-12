@@ -33,6 +33,9 @@ class ApacheGelf < FPM::Cookery::Recipe
     when '7'
       depends 'apache2', 'libjson-c2', 'zlib1g'
       build_depends 'apache2-threaded-dev', 'libjson-c-dev', 'zlib1g-dev'
+    when '8'
+      depends 'apache2', 'libjson-c2', 'zlib1g'
+      build_depends 'apache2-threaded-dev', 'libjson-c-dev', 'zlib1g-dev'
     else
       depends 'apache2', 'libjson-c3', 'zlib1g'
       build_depends 'apache2-dev', 'libjson-c-dev', 'zlib1g-dev'
