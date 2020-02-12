@@ -30,6 +30,9 @@ class ApacheGelf < FPM::Cookery::Recipe
     section 'net'
 
     case FPM::Cookery::Facts.osmajorrelease
+    when '6'
+      depends 'apache2', 'libjson-c2', 'zlib1g'
+      build_depends 'apache2-threaded-dev', 'libjson-c-dev', 'zlib1g-dev'
     when '7'
       depends 'apache2', 'libjson-c2', 'zlib1g'
       build_depends 'apache2-threaded-dev', 'libjson-c-dev', 'zlib1g-dev'

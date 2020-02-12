@@ -12,6 +12,7 @@
    * choose wanted Debian release
 
 ```
+  $ docker build -t apache-gelf-debian6  dist/debian6/
   $ docker build -t apache-gelf-debian7  dist/debian7/
   $ docker build -t apache-gelf-debian8  dist/debian8/
   $ docker build -t apache-gelf-debian9  dist/debian9/
@@ -29,6 +30,7 @@
    * run one of the below depending on the chosen Debian release
 
 ```
+  $ docker run --rm=true -v `pwd`:/apache-gelf -t -i apache-gelf-debian6  fpm-cook package /apache-gelf/dist/recipe.rb
   $ docker run --rm=true -v `pwd`:/apache-gelf -t -i apache-gelf-debian7  fpm-cook package /apache-gelf/dist/recipe.rb
   $ docker run --rm=true -v `pwd`:/apache-gelf -t -i apache-gelf-debian8  fpm-cook package /apache-gelf/dist/recipe.rb
   $ docker run --rm=true -v `pwd`:/apache-gelf -t -i apache-gelf-debian9  fpm-cook package /apache-gelf/dist/recipe.rb
